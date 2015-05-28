@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+#customer_ticket {
+  padding: 3px 6px 3px 6px;
+  background-color: #d3d3d3;
+}
+#notice_container {
+  min-height: 55px;
+}
+.notice, .alert {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3em;
+  z-index: 100;
+}
+.alert {
+  color: red;
+}
+.notice {
+  color: green;
+}
+#total {
+  text-align: right;
+}
+#data_table td, #data_table th {
+  font-size: 1em;
+}
+#concierge_headline {
+  margin-top: 40px;
+}
+#store_bag_button {
+  margin-right: 50px;
+}
+
+.color {
+  border-radius: 50%;
+  margin: 5px;
+  text-align: center;
+  border: 2px solid black;
+  padding-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.small {
+  background-color: pink;
+}
+
+.medium {
+  background-color: green;
+}
+
+.large {
+  background-color: orange;
+}
+
+#concierge {
+	border-radius: 50%;
+	border: 2px solid black;
+	opacity: 1.0;
+	-webkit-transition: 1s linear;
+	margin-top: 20px;
+	margin-left: -50px;
+}
+#concierge:hover {
+	opacity: 0.9;
+}

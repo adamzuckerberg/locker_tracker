@@ -1,0 +1,93 @@
+<div class="row">
+	<div class="large-3 columns">
+		<%= image_tag('concierge.jpg', :id => "concierge") %>
+	</div>
+	<div class="large-9 columns">
+		<h4 id="concierge_headline">What would you like to do?</h4>
+		<div class="large-4 columns">
+			<%= link_to('Store Bag', store_bag_concierge_path(id: @random_guest_bag.id), :id => "store_bag_button", :class => "button success") %>
+			<div id="store_bag_details"> 			
+				<h5>Bag Size: <span><%= @random_guest_bag.size %></span></h5>	
+			</div>
+		</div>	
+		<div class="large-4 columns">
+			<%= link_to('Retrieve Bag', retrieve_bag_concierge_path(id: @random_guest_ticket.id), :id => "retrieve_bag_button", :class => "button") %>
+			<div id="retrieve_bag_details"> 
+				<h5>Customer Ticket: <span><%= @random_guest_ticket.locker_id %></span></h5>
+				<h5>Bag Size: <span><%= @random_guest_ticket.size %></span></h5>
+			</div>
+		</div>
+		<div class="large-1 columns"></div>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="large-8 columns large-centered">
+		<h4>Current Locker Status:</h4>
+		<table id="data_table" style="width:100%;text-align:center;">
+			<thead>
+				<tr>
+					<th>Locker Size</th>
+					<th>Empty</th>
+					<th>Filled</th>		
+					<th>Total</th>
+				</tr>
+			<thead>
+			<tbody>
+				<tr>
+					<td>Small Locker</td>
+					<td><%= @locker.small.empty.count %></td>
+					<td><%= @locker.small.full.count %></td>
+					<td><%= @locker.small.count %></td>
+				</tr>
+				<tr>
+					<td>Medium Locker</td>
+					<td><%= @locker.medium.empty.count %></td>
+					<td><%= @locker.medium.full.count %></td>
+					<td><%= @locker.medium.count %></td>
+				</tr>
+				<tr>
+					<td>Large Locker</td>
+					<td><%= @locker.large.empty.count %></td>
+					<td><%= @locker.large.full.count %></td>
+					<td><%= @locker.large.count %></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th colspan="1">Total :</th>
+					<strong><td><%= @locker.empty.count %></td></strong>
+					<strong><td><%= @locker.full.count %></td></strong>
+					<strong><td><%= @locker.count %></td></strong>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="large-8 columns large-centered">
+		<h4>Customer Ticket for Checked Bags:</h4>
+		<table id="data_table" style="width:100%;text-align:center;">
+			<thead>
+				<tr>
+					<th>Customer Ticket# 
+							<% if params[:ticket] %>
+								<span id="customer_ticket">
+									<%= params[:ticket] %>
+							    </span>
+							<% end %>
+					</th>
+				</tr>
+			<thead>
+			<tbody>
+				<tr>
+					<td>Thank you for visiting our concierge desk. Please present this ticket to the concierge to retrieve your checked baggage. <p><em>It is our pleasure to serve you.</em></p></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
