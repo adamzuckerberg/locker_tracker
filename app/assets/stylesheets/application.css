@@ -46,7 +46,6 @@
 #store_bag_button {
   margin-right: 50px;
 }
-
 .color {
   border-radius: 50%;
   margin: 5px;
@@ -56,19 +55,15 @@
   width: 50px;
   height: 50px;
 }
-
 .small {
   background-color: pink;
 }
-
 .medium {
   background-color: green;
 }
-
 .large {
   background-color: orange;
 }
-
 #concierge {
 	border-radius: 50%;
 	border: 2px solid black;
@@ -79,4 +74,7 @@
 }
 #concierge:hover {
 	opacity: 0.9;
+}
+#data_table {
+  border: 2px solid black;
 }
